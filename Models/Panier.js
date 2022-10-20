@@ -1,21 +1,12 @@
 import mongoose from "mongoose";
 
 const panierSchema = new mongoose.Schema({
-    freelanceId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    apayer: {type: Boolean},
-    prixTotale: {type: String},
-    panierItems: [
-        {
-         userId: { type: String},
-         img: { type: String},
-         desc: {type: String, max: 500,},
-         competence: {type: String, max: 500,},
-         categories: {type: String, max: 500,},
-         evaluation: {type: String, max: 500,},
-         postId: { type: mongoose.Schema.Types.ObjectId, ref: 'Post', required: true },
-
-        },
-      ],
+    freelanceId: { type:String,
+      ref: "User",
+      required: true},
+    postId: {  type:String,
+      ref: "Post",
+      required: true },
 },
 {
     timestamps: true,

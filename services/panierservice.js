@@ -5,7 +5,7 @@ import User from "../Models/User.js";
 const panierservices={
 
 addPanier: async (panierdata) =>{
-    console.log('panieerrrrrr',panierdata.userId)
+    console.log('panieerr',panierdata.userId)
     const newPanier = new Panier(panierdata)
   
         const userdata =  await User.findOne({

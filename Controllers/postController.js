@@ -4,7 +4,7 @@
 
  addPost : async(req,res)=>{
     
-    let postdata=req.body
+    let postdata=req.body.id
     // console.log('postdata', postdata)
     let finisheddata = await postservices.addPost(postdata);
     res.send(finisheddata);

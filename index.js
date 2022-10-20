@@ -24,9 +24,9 @@ app.get('/',(req,res)=>{
 });
 
 app.use("/api/users", authRouter);
-app.use('/api/post',postRouter);
+app.use("/api/post",postRouter);
 app.use('/api/panier',panierRouter);
-const port = process.env.PORT || 8088;
+const port = process.env.PORT || 8000;
   app.listen(port, () => {
   console.log(`backend is running at http://localhost:${port}`);
   

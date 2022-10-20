@@ -27,7 +27,7 @@ addPost: async (postdata) =>{
 
    listPost: async (postdata) => {
     console.log(postdata)
-      const posts = await Post.find();
+      const posts = await Post.find({});
       return posts;
 },
 

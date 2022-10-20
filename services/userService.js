@@ -103,7 +103,7 @@ export const usersservices={
   getUserById: async(req, res) => {
     const id = req.params.id;
   
-    User.findById(id)
+    User.findById({id})
       .then(data => {
         if (!data)
           res.status(404);
